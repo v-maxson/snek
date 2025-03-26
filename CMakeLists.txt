@@ -1,0 +1,18 @@
+cmake_minimum_required(VERSION 3.31)
+
+set(PROJECT_VERSION_MAJOR 0)
+set(PROJECT_VERSION_MINOR 1)
+set(PROJECT_VERSION_PATCH 0)
+project(
+        snek
+        LANGUAGES C
+        VERSION ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${PROJECT_VERSION_PATCH}
+)
+
+set(CMAKE_C_STANDARD 11)
+
+
+file(GLOB_RECURSE SOURCES "src/*.c" "src/*.h")
+add_executable(${PROJECT_NAME} ${SOURCES})
+
+# Dependencies
